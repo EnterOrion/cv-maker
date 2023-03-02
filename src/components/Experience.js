@@ -57,16 +57,23 @@ const ExperienceForm = () =>
     const listItems = addData.map(
         (element) => {
             return (
-                <ul>
+                <ul key={element.key}>
                     <li style={{ 
                         fontWeight: 'bold', 
                         color: 'red' }}
                     >
-                        {element.jobName}
+                        {element.jobName}''
                     </li>
                     <li>{element.years}</li>
                     <li>{element.position}</li>
                     <li>{element.description}</li>
+                    <button onClick={() => {
+                    setAddData(
+                        addData.filter(a =>
+                        a.key !== element.key
+                        )
+                    );
+                    }}>Remove</button>
                 </ul>
             )
         }

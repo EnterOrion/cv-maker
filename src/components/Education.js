@@ -14,6 +14,10 @@ const EducationForm = () => {
 
     const [addData, setAddData] = React.useState([]);
 
+    const [showEditYears, setShowEditYears] = React.useState("");
+
+    const [editYear, setEditYear] = React.useState("")
+
     const handleChange = (e) => {
         setFormData(prevFormData => {
             return {
@@ -48,23 +52,66 @@ const EducationForm = () => {
             }
         })
     }
+    
+    const clickHandler = (e) => {
+        if (e.target.value > 0) {
+        setShowEditYears(e.target.value);
+        }
+	}
+
+
+    const handleEdit = (e) => {
+        setEditYear(e.target.value)
+    }
+
+    const updateEdit = (e) => {
+        let key = e.target.value;
+        
+        setAddData(
+            addData.map((data) => {
+              if (data.key == key) {
+                return { ...data, years: editYear};
+              } else {
+                return data;
+              }
+            })
+          );
+        setShowEditYears("");
+        setEditYear("");
+      
+    }
+
 
     const listItems = addData.map(
         (element) => {
             return (
-                <ul>
+                
+                <ul key={element.key}>
                     <li style={{ 
                         fontWeight: 'bold', 
                         color: 'red' }}
+                        
                     >
                         {element.school}
                     </li>
-                    <li>{element.years}</li>
+                    <li onClick={clickHandler}  value={element.key}>{showEditYears == element.key  ? <input onChange={handleEdit} 
+                    name="years"
+                    value={editYear}  
+                    /> : element.years}</li> {showEditYears== element.key  && <span><button onClick={updateEdit} value={element.key}></button></span>}
                     <li>{element.degree}</li>
+                    <button onClick={() => {
+                    setAddData(
+                        addData.filter(a =>
+                        a.key !== element.key
+                        )
+                    );
+                    }}>Remove</button>
                 </ul>
             )
         }
     )
+
+   
 
 
 
