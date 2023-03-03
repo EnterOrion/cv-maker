@@ -11,10 +11,12 @@ function App() {
   return (
   <div>
     <Header />
+    <div className="main-content">
   <Instructions />
    <PersonalDetailsForm />
    <ExperienceForm />
    <EducationForm />
+   </div>
    </div>
   );
 

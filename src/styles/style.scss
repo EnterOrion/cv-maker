@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    background-color: #FCFDFF;
+}
+
+.header {
+    background-color: rgb(238, 238, 238);
+    font-family: 'Golos Text', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    margin: 0;
+    padding-left: 1.2rem;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.header img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+input {
+    font-family: 'Lora', serif;
+}
+
+button {
+    font-family: 'Arimo', sans-serif;
+}
+
+.main-content {
+    margin-left: .5em;
+    margin-right: .5em;
+   
+}
+
+span {
+    display: inline-block;
+    vertical-align: center;
+}
