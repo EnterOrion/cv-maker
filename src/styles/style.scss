@@ -11,22 +11,25 @@ body {
 .header {
     background-color: rgb(238, 238, 238);
     font-family: 'Golos Text', sans-serif;
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 700;
     font-style: italic;
     margin: 0;
     padding-left: 1.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
     display: flex;
 }
 
 .header img {
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
 }
 
 .header h1 {
     margin: 0;
+    color: rgb(0, 0, 126);
 }
 
 input {
@@ -43,7 +46,40 @@ button {
    
 }
 
-span {
-    display: inline-block;
-    vertical-align: center;
+.welcome-text p {
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+
+.welcome-text {
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.welcome-text h1 {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.welcome-text h3 {
+    font-weight: 500;
+}
+
+.welcome-para {
+    border: 1px solid rgb(0, 0, 126);
+    padding: 2em;
+}
+
+.welcome-text img {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: .5rem;
+}
+
+.blue-text {
+    color: rgb(0, 0, 126);
 }
