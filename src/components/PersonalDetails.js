@@ -250,7 +250,7 @@ const PersonalDetailsForm = () => {
 
     return (
         <div>
-        <form onSubmit={handleSubmit}>
+        <form className="center-form top-form" onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="Name"

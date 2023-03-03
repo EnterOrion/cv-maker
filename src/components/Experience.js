@@ -253,7 +253,7 @@ const ExperienceForm = () =>
 
     return (
         <div>
-        <form onSubmit={handleSubmit}>
+        <form className="center-form" onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Job Name"

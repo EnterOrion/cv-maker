@@ -6,8 +6,8 @@ const Instructions = () => {
         <div className="welcome-text">
             <h1>Looking for an effortless way to design an resume?</h1>
             <h3><img alt="" src={arrowIcon}></img>  Welcome to <span class="blue-text">your personal resume builder.</span> </h3>
-            <p className="welcome-para">  Fill out each section and then click the button to add it to your resume below. 
-                If you want to edit any information, just click the text on the resume that you want to change and click "update" when you're done. You can also delete sections entirely.
+            <p className="welcome-para">  <strong>Fill out each section</strong> and then click the button next to it to add the section to your resume. 
+               You can also <strong>click on text</strong> on the resume itself if you want to edit any individual pieces of information and then <strong>click "update"</strong> when you're done. You can also delete sections entirely.
             </p>
         </div>
     )

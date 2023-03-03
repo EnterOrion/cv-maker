@@ -202,7 +202,7 @@ const EducationForm = () => {
 
     return (
         <div>
-        <form onSubmit={handleSubmit}>
+        <form className="center-form" onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Name of School"
