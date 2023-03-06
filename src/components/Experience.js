@@ -73,7 +73,7 @@ const ExperienceForm = () =>
             />
               <input
                 type="text"
-                placeholder="Years"
+                placeholder="Years (from - to)"
                 onChange={handleChange}
                 name="years"
                 value={formData.years}

@@ -138,11 +138,10 @@ const PersonalDetailsDisplay = () => {
     const listItems = addData.map(
         (element) => {
             return (
-                <ul key={element.key}>
+                <ul class="personal" key={element.key}>
 
-                 <li onClick={clickNameHandler}  value={element.key}
-                    style={{ 
-                        fontWeight: 'bold'}}> {showEditName == element.key  ? <input onChange={handleNameEdit} 
+                 <li onClick={clickNameHandler}  value={element.key} className="name-personal"
+                 > {showEditName == element.key  ? <input onChange={handleNameEdit} 
                         name="name"
                         value={editName} 
                         placeholder="Name"/>:
@@ -151,35 +150,32 @@ const PersonalDetailsDisplay = () => {
 
 
 
-
-                <li onClick={clickEmailHandler}  value={element.key}
-                    style={{ 
-                        fontWeight: 'bold'}}> {showEditEmail == element.key  ? <input onChange={handleEmailEdit} 
-                        name="email"
-                        value={editEmail} 
-                        placeholder="Email"/>:
-                        element.email}
-                </li> {showEditEmail == element.key  && <span><button onClick={updateEmailEdit} value={element.key}>Update</button></span>}
-
-
-
-
-                <li onClick={clickPhoneHandler}  value={element.key}>{showEditPhone == element.key  ? <input onChange={handlePhoneEdit} 
-                    name="phone"
-                    value={editPhone} 
-                    placeholder="Phone number" 
-                    /> : element.phone}</li> {showEditPhone == element.key  && <span><button onClick={updatePhoneEdit} value={element.key}>Update</button></span>}
-
-
-                <li onClick={clickAddressHandler}  value={element.key}>{showEditAddress == element.key  ? <input onChange={handleAddressEdit} 
-                    name="address"
-                    value={editAddress} 
-                    placeholder="Address" 
-                    /> : element.address}</li> {showEditAddress == element.key  && <span><button onClick={updateAddressEdit} value={element.key}>Update</button></span>}
+              
+                <div class="lower-personal">
+                  <li onClick={clickEmailHandler}  value={element.key} className="email-personal"
+                      > {showEditEmail == element.key  ? <input onChange={handleEmailEdit}
+                          name="email"
+                          value={editEmail}
+                          placeholder="Email"/>:
+                          <span>{element.email}</span>}
+                  </li> {showEditEmail == element.key  && <span><button onClick={updateEmailEdit} value={element.key}>Update</button></span>}
+                  <li onClick={clickPhoneHandler}  value={element.key} className="phone-personal"
+                  >{showEditPhone == element.key  ? <input onChange={handlePhoneEdit}
+                      name="phone"
+                      value={editPhone}
+                      placeholder="Phone number"
+                      /> : <span>{element.phone}</span>}</li> {showEditPhone == element.key  && <span><button onClick={updatePhoneEdit} value={element.key}>Update</button></span>}
+                  <li onClick={clickAddressHandler}  value={element.key} className="address-personal"
+                  >{showEditAddress == element.key  ? <input onChange={handleAddressEdit}
+                      name="address"
+                      value={editAddress}
+                      placeholder="Address"
+                    /> : <span>{element.address}</span>}</li> {showEditAddress == element.key  && <span><button onClick={updateAddressEdit} value={element.key}>Update</button></span>}
+                </div>
 
 
 
-                    <button onClick={() => {
+                    <button className="remove-button" onClick={() => {
                     setAddData(
                         addData.filter(a =>
                         a.key !== element.key
@@ -193,7 +189,10 @@ const PersonalDetailsDisplay = () => {
 
 
    return (
-    <div>{listItems}</div>
+    <div>
+      <h2>Your Name Here</h2>
+    <div className="personal-list">{listItems}</div>
+    </div>
    )
 
 

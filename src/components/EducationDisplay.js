@@ -119,7 +119,7 @@ const EducationDisplay = () => {
                     <li onClick={clickYearHandler}  value={element.key}>{showEditYears == element.key  ? <input onChange={handleYearEdit} 
                     name="years"
                     value={editYear} 
-                    placeholder="Years" 
+                    placeholder="Years (from - to)" 
                     /> : element.years}</li> {showEditYears == element.key  && <span><button onClick={updateYearEdit} value={element.key}>Update</button></span>}
 
 
@@ -129,7 +129,7 @@ const EducationDisplay = () => {
                         placeholder="Degree"/>:
                         element.degree}</li> {showEditDegree == element.key  && <span><button onClick={updateDegreeEdit} value={element.key}>Update</button></span>}
                     
-                    <button onClick={() => {
+                    <button className="remove-button" onClick={() => {
                     setAddData(
                         addData.filter(a =>
                         a.key !== element.key
@@ -143,7 +143,10 @@ const EducationDisplay = () => {
     )
 
    return (
-    <div>{listItems}</div>
+    <div>
+      <h2>Education</h2>
+    <div className="education-list">{listItems}</div>
+    </div>
    )
 
 

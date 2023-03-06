@@ -129,4 +129,67 @@ input {
     min-height: 80vh; // Need media query
     min-width: 40vw;
     border: 1px solid rgb(0, 0, 126);
+
 }
+
+
+.name-personal {
+    font-weight: 800;
+    font-size: 50px;
+    list-style: none;
+    padding-right: 20px;
+    
+
+  
+}
+
+.lower-personal span {
+    left: -8px;
+    position: relative;
+}
+
+.lower-personal {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    list-style: square;
+
+}
+
+.personal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 18px;
+
+
+    
+}
+
+.remove-button {
+    padding: 2px 5px;
+    background-color: transparent;
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.596);
+ 
+}
+
+.remove-button:hover {
+    background-color: rgb(247, 212, 212);
+ 
+}
+
+.personal-list li::marker {
+    color:rgb(0, 0, 126);
+}
+
+.personal-list, .experience-list {
+    border-bottom: 1px solid black;
+    
+}
+
+.experience-list li, .education-list li{
+    list-style: none;
+}
+

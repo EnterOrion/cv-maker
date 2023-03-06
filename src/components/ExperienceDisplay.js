@@ -159,7 +159,7 @@ const ExperienceDisplay = () => {
                     <li onClick={clickYearHandler}  value={element.key}>{showEditYears == element.key  ? <input onChange={handleYearEdit} 
                     name="years"
                     value={editYear} 
-                    placeholder="Years" 
+                    placeholder="Years (from - to)" 
                     /> : element.years}</li> {showEditYears == element.key  && <span><button onClick={updateYearEdit} value={element.key}>Update</button></span>}
 
 
@@ -177,7 +177,7 @@ const ExperienceDisplay = () => {
                     /> : element.description}</li> {showEditDescription == element.key  && <span><button onClick={updateDescriptionEdit} value={element.key}>Update</button></span>}
 
 
-                    <button onClick={() => {
+                    <button className="remove-button" onClick={() => {
                     setAddData(
                         addData.filter(a =>
                         a.key !== element.key
@@ -189,7 +189,10 @@ const ExperienceDisplay = () => {
         }
     )
     return (
-        <div>{listItems}</div>
+      <div>
+        <h2>Experience</h2>
+        <div className="experience-list">{listItems}</div>
+        </div>
     )
 }
 
