@@ -116,7 +116,7 @@ const EducationDisplay = () => {
                     </li> {showEditSchool == element.key  && <span><button onClick={updateSchoolEdit} value={element.key}>Update</button></span>}
                     
                     
-                    <li onClick={clickYearHandler}  value={element.key}>{showEditYears == element.key  ? <input onChange={handleYearEdit} 
+                    <li className="italic" onClick={clickYearHandler}  value={element.key}>{showEditYears == element.key  ? <input onChange={handleYearEdit} 
                     name="years"
                     value={editYear} 
                     placeholder="Years (from - to)" 

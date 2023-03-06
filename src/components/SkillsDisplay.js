@@ -43,7 +43,7 @@ const SkillsDisplay = () => {
     const listItems = addData.map(
         (element) => {
             return (
-                <ul class="personal" key={element.key}>
+                <ul key={element.key}>
 
                  <li onClick={clickSkillsHandler}  value={element.key}>
                      {showEditSkills == element.key  ? <input onChange={handleSkillsEdit} 
@@ -60,7 +60,8 @@ const SkillsDisplay = () => {
                     );
                     }}>Remove</button>
 
-                </ul> )
+                </ul>
+                )
                 }
                 )
 

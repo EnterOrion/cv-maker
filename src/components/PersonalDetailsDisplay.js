@@ -12,10 +12,12 @@ const PersonalDetailsDisplay = () => {
         editAddress, setEditAddress} = personalDetailsContext;
 
 
+   
     const clickNameHandler = (e) => {
         if (e.target.value > 0 && !e.target.placeholder) {
         setShowEditName(e.target.value);
         setEditName("");
+        console.log(listItems);
         }
         
 	}
@@ -175,7 +177,7 @@ const PersonalDetailsDisplay = () => {
 
 
 
-                    <button className="remove-button" onClick={() => {
+                    <button className="remove-button-personal" onClick={() => {
                     setAddData(
                         addData.filter(a =>
                         a.key !== element.key
@@ -190,7 +192,7 @@ const PersonalDetailsDisplay = () => {
 
    return (
     <div>
-      <h2>Your Name Here</h2>
+     { listItems.length == 0 && <h2 className="h2-name">Your Name Here</h2> }
     <div className="personal-list">{listItems}</div>
     </div>
    )

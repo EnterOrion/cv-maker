@@ -162,22 +162,29 @@ input {
     justify-content: center;
     flex-direction: column;
     padding-right: 18px;
+    position: relative;
 
 
     
 }
 
-.remove-button {
+.remove-button, .remove-button-personal {
     padding: 2px 5px;
     background-color: transparent;
     font-size: 12px;
     border: 1px solid rgba(0, 0, 0, 0.596);
+    
  
 }
 
-.remove-button:hover {
+.remove-button:hover, .remove-button-personal:hover {
     background-color: rgb(247, 212, 212);
  
+}
+
+.remove-button-personal {
+    position: absolute;
+    right: 20px;
 }
 
 .personal-list li::marker {
@@ -189,7 +196,31 @@ input {
     
 }
 
-.experience-list li, .education-list li{
+.experience-list li, .education-list li {
     list-style: none;
+    font-size: 12px;
 }
 
+.skills-list li {
+    font-size: 12px;
+}
+
+.experience-list, .skills-list, .education-list {
+    display: flex;
+}
+
+
+h2 {
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.h2-name {
+    margin-left: 33%;
+    font-size: 26px;
+}
+
+.italic {
+    font-style: italic;
+}
