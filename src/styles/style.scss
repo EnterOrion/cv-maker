@@ -225,6 +225,26 @@ h2 {
     font-style: italic;
 }
 
+
+@media (max-width: 500px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
 @media print {
     .main-instructions, .header, .form-section {
         display: none;
