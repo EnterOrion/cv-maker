@@ -224,3 +224,22 @@ h2 {
 .italic {
     font-style: italic;
 }
+
+@media print {
+    .main-instructions, .header, .form-section {
+        display: none;
+    }
+
+    body {
+       display: flex;
+       align-items: center;
+       justify-content: center; 
+    }
+
+    .resume {
+        height: 99vh;  
+        width: 100vw;
+        border: 1px solid black;
+        
+    }
+}
