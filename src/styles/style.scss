@@ -127,7 +127,7 @@ input {
 
 .resume {
   min-height: 80vh;
-  width: 40vw;
+  width: 45vw;
   
   border: 1px solid $primary-highlight-color;
 }
@@ -177,10 +177,7 @@ input {
   background-color: rgb(247, 212, 212);
 }
 
-.remove-button-personal {
-  position: absolute;
-  right: 20px;
-}
+
 
 .personal-list li::marker {
   color: $primary-highlight-color;
@@ -230,6 +227,17 @@ h2 {
     padding: 2px 5px;
 }
 
+
+
+
+@media (max-width: 900px)  {
+    .lower-personal {
+        flex-direction: column;
+    }
+
+   
+}
+
 @media (max-width: 500px) {
   body {
     display: flex;
@@ -243,25 +251,36 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-}
-
-@media print {
-  .main-instructions,
-  header,
-  .form-section, .remove-button, .remove-button-personal {
-    display: none;
-  }
-
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 50px;
   }
 
   .resume {
-    height: 99vh;
-    width: 100vw;
-    border: 1px solid black;
-  }
+    width: 80vw;
 }
+
+}
+
+
+@media print {
+    .main-instructions,
+    header,
+    .form-section, .remove-button, .remove-button-personal {
+      display: none;
+    }
+    .lower-personal {
+      flex-direction: row;
+  }
+  
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .resume {
+      height: 99vh;
+      width: 100vw;
+      border: 1px solid black;
+    }
+  }
+  
