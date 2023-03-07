@@ -1,5 +1,6 @@
 import React from "react";
 import { useContext } from "react";
+import { isCompositeComponent } from "react-dom/test-utils";
 import PersonalInfoContext from "../contexts/PersonalInfoContext";
 
 const PersonalDetailsDisplay = () => {
@@ -17,7 +18,6 @@ const PersonalDetailsDisplay = () => {
         if (e.target.value > 0 && !e.target.placeholder) {
         setShowEditName(e.target.value);
         setEditName("");
-        console.log(listItems);
         }
         
 	}
@@ -46,9 +46,12 @@ const PersonalDetailsDisplay = () => {
     }
 
     const clickEmailHandler = (e) => {
+        console.log(e.target.value)
+        console.log(e.target.placeholder)
         if (e.target.value > 0 && !e.target.placeholder) {
         setShowEditEmail(e.target.value);
         setEditEmail("");
+        console.log("clicked");
         }
 	}
 
@@ -79,6 +82,7 @@ const PersonalDetailsDisplay = () => {
         if (e.target.value > 0 && !e.target.placeholder) {
         setShowEditPhone(e.target.value);
         setEditPhone("");
+        console.log("clicked");
         }
 	}
 
@@ -109,6 +113,7 @@ const PersonalDetailsDisplay = () => {
         if (e.target.value > 0 && !e.target.placeholder) {
         setShowEditAddress(e.target.value);
         setEditAddress("");
+        console.log("clicked");
         }
 	}
 
@@ -148,31 +153,31 @@ const PersonalDetailsDisplay = () => {
                         value={editName} 
                         placeholder="Name"/>:
                         element.name}
-                </li> {showEditName == element.key  && <span><button onClick={updateNameEdit} value={element.key}>Update</button></span>}
+                </li> {showEditName == element.key  && <span><button className="update-button edit" onClick={updateNameEdit} value={element.key}>Update</button></span>}
 
 
 
               
                 <div class="lower-personal">
-                  <li onClick={clickEmailHandler}  value={element.key} className="email-personal"
+                  <li onClick={clickEmailHandler} value={element.key} className="email-personal"
                       > {showEditEmail == element.key  ? <input onChange={handleEmailEdit}
                           name="email"
                           value={editEmail}
                           placeholder="Email"/>:
-                          <span>{element.email}</span>}
-                  </li> {showEditEmail == element.key  && <span><button onClick={updateEmailEdit} value={element.key}>Update</button></span>}
+                          element.email}
+                  </li> {showEditEmail == element.key  && <span><button className="update-button edit" onClick={updateEmailEdit} value={element.key}>Update</button></span>}
                   <li onClick={clickPhoneHandler}  value={element.key} className="phone-personal"
                   >{showEditPhone == element.key  ? <input onChange={handlePhoneEdit}
                       name="phone"
                       value={editPhone}
                       placeholder="Phone number"
-                      /> : <span>{element.phone}</span>}</li> {showEditPhone == element.key  && <span><button onClick={updatePhoneEdit} value={element.key}>Update</button></span>}
+                      /> : element.phone}</li> {showEditPhone == element.key  && <span><button className="update-button edit" onClick={updatePhoneEdit} value={element.key}>Update</button></span>}
                   <li onClick={clickAddressHandler}  value={element.key} className="address-personal"
                   >{showEditAddress == element.key  ? <input onChange={handleAddressEdit}
                       name="address"
                       value={editAddress}
                       placeholder="Address"
-                    /> : <span>{element.address}</span>}</li> {showEditAddress == element.key  && <span><button onClick={updateAddressEdit} value={element.key}>Update</button></span>}
+                    /> : element.address}</li> {showEditAddress == element.key  && <span><button className="update-button edit" onClick={updateAddressEdit} value={element.key}>Update</button></span>}
                 </div>
 
 

@@ -1,265 +1,267 @@
+$primary-highlight-color: rgb(0, 0, 126);
+
 * {
-    box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Lora', serif;
-    margin: 0;
-    background-color: #FCFDFF;
+  font-family: "Lora", serif;
+  margin: 0;
+  background-color: #fcfdff;
 }
 
-.header {
-    background-color: rgb(238, 238, 238);
-    font-family: 'Golos Text', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    font-style: italic;
-    margin: 0;
-    padding-left: 1.2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-    display: flex;
-}
+header {
+  background-color: rgb(238, 238, 238);
+  font-family: "Golos Text", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+  padding-left: 1.2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
 
-.header img {
+  img {
     height: 2rem;
     width: 2rem;
-}
+  }
 
-.header h1 {
+  h1 {
     margin: 0;
-    color: rgb(0, 0, 126);
+    color: $primary-highlight-color;
+  }
 }
 
 input {
-    font-family: 'Lora', serif;
-    border: 1px solid rgb(69, 69, 187);
-    padding-right: 200px;
-   
+  font-family: "Lora", serif;
+  border: 1px solid rgb(69, 69, 187);
+  min-width: 200px;
 }
 
 input:focus {
-    outline-color: rgb(0, 0, 126);
+  outline-color: $primary-highlight-color;
 }
 
-button {
-    font-family: 'Lora', serif;
-    border-radius: 10px;
-    border: 1px solid black;
-    background-color: #47add3e0;
-    padding: .3rem;
-
+.update-button, .remove-button, .remove-button-personal {
+  font-family: "Lora", serif;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #47add3e0;
+  padding: 0.3rem;
 }
 
-button:hover {
-    background-color: rgba(226, 248, 255, 0.726);
+.update-button:hover {
+  background-color: rgba(226, 248, 255, 0.726);
 }
 
-.main-content, .main-instructions {
-    margin-left: .5em;
-    margin-right: .5em;
-   
+.main-content,
+.main-instructions {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .main-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 100px;
 }
 
-.welcome-text p {
+.welcome-text {
+  margin: auto;
+  text-align: center;
+  margin-top: 1rem;
+
+  p {
     max-width: 600px;
     text-align: center;
     margin: auto;
+  }
 }
-
 
 .welcome-text {
-    margin: auto;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.welcome-text h1 {
+  h1 {
     max-width: 1000px;
     margin: auto;
     text-align: center;
-}
+  }
 
-.welcome-text h3 {
+  h3 {
     font-weight: 500;
+  }
 }
 
 .welcome-para {
-    border: 1px solid rgb(0, 0, 126);
-    padding: 2em;
+  border: 1px solid $primary-highlight-color;
+  padding: 2em;
 }
 
 .welcome-text img {
-    height: 1.2rem;
-    width: 1.2rem;
-    margin-right: .5rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 0.5rem;
 }
 
 .blue-text {
-    color: rgb(0, 0, 126);
+  color: $primary-highlight-color;
 }
 
 .center-form {
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    max-width: 650px;
-}
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
 
-.center-form button {
+  button {
     align-self: flex-end;
-    margin-top: .1rem;
+    margin-top: 0.1rem;
+  }
 }
-
 
 input {
-    margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
 .resume {
-    min-height: 80vh; // Need media query
-    min-width: 40vw;
-    border: 1px solid rgb(0, 0, 126);
-
+  min-height: 80vh;
+  width: 40vw;
+  
+  border: 1px solid $primary-highlight-color;
 }
-
 
 .name-personal {
-    font-weight: 800;
-    font-size: 50px;
-    list-style: none;
-    padding-right: 20px;
-    
-
-  
-}
-
-.lower-personal span {
-    left: -8px;
-    position: relative;
+  font-weight: 800;
+  font-size: 50px;
+  list-style: none;
+  padding-right: 20px;
 }
 
 .lower-personal {
-    display: flex;
-    gap: 15px;
-    font-size: 12px;
-    list-style: square;
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  list-style: square;
+
+  li {
+    list-style-type: "∎";
+    padding-left: .5ch;
+  }
 
 }
 
 .personal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-right: 18px;
-    position: relative;
-
-
-    
-}
-
-.remove-button, .remove-button-personal {
-    padding: 2px 5px;
-    background-color: transparent;
-    font-size: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.596);
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 18px;
+  position: relative;
  
 }
 
-.remove-button:hover, .remove-button-personal:hover {
-    background-color: rgb(247, 212, 212);
- 
+
+
+.remove-button,
+.remove-button-personal {
+  padding: 2px 5px;
+  background-color: transparent;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.596);
+}
+
+.remove-button:hover,
+.remove-button-personal:hover {
+  background-color: rgb(247, 212, 212);
 }
 
 .remove-button-personal {
-    position: absolute;
-    right: 20px;
+  position: absolute;
+  right: 20px;
 }
 
 .personal-list li::marker {
-    color:rgb(0, 0, 126);
+  color: $primary-highlight-color;
 }
 
-.personal-list, .experience-list, .skills-list {
-    border-bottom: 1px solid black;
-    
+.personal-list,
+.experience-list,
+.skills-list {
+  border-bottom: 1px solid black;
 }
 
-.experience-list li, .education-list li {
-    list-style: none;
-    font-size: 12px;
+.experience-list li,
+.education-list li {
+  list-style: none;
+  font-size: 12px;
 }
 
 .skills-list li {
-    font-size: 12px;
+  font-size: 12px;
 }
 
-.experience-list, .skills-list, .education-list {
-    display: flex;
+.experience-list,
+.skills-list,
+.education-list {
+  display: flex;
+  flex-wrap: wrap;
 }
-
 
 h2 {
-    margin-left: 10px;
-    font-size: 20px;
-    margin-bottom: 0;
+  margin-left: 10px;
+  font-size: 20px;
+  margin-bottom: 0;
 }
 
 .h2-name {
-    margin-left: 33%;
-    font-size: 26px;
+  margin-left: 33%;
+  font-size: 26px;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
+.edit {
+    background-color: transparent;
+    font-size: 12px;
+    padding: 2px 5px;
+}
 
 @media (max-width: 500px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    }
-
-    .main-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media print {
-    .main-instructions, .header, .form-section {
-        display: none;
-    }
+  .main-instructions,
+  header,
+  .form-section, .remove-button, .remove-button-personal {
+    display: none;
+  }
 
-    body {
-       display: flex;
-       align-items: center;
-       justify-content: center; 
-    }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .resume {
-        height: 99vh;  
-        width: 100vw;
-        border: 1px solid black;
-        
-    }
+  .resume {
+    height: 99vh;
+    width: 100vw;
+    border: 1px solid black;
+  }
 }

@@ -152,7 +152,7 @@ const ExperienceDisplay = () => {
                         value={editJob} 
                         placeholder="Job Name"/>:
                         element.jobName}
-                    </li> {showEditJob == element.key  && <span><button onClick={updateJobEdit} value={element.key}>Update</button></span>}
+                    </li> {showEditJob == element.key  && <span><button className="update-button edit" onClick={updateJobEdit} value={element.key}>Update</button></span>}
 
 
 
@@ -160,21 +160,21 @@ const ExperienceDisplay = () => {
                     name="years"
                     value={editYear} 
                     placeholder="Years (from - to)" 
-                    /> : element.years}</li> {showEditYears == element.key  && <span><button onClick={updateYearEdit} value={element.key}>Update</button></span>}
+                    /> : element.years}</li> {showEditYears == element.key  && <span><button className="update-button edit" onClick={updateYearEdit} value={element.key}>Update</button></span>}
 
 
                     <li onClick={clickPositionHandler}  value={element.key}>{showEditPosition == element.key  ? <input onChange={handlePositionEdit} 
                     name="position"
                     value={editPosition} 
                     placeholder="Position" 
-                    /> : element.position}</li> {showEditPosition == element.key  && <span><button onClick={updatePositionEdit} value={element.key}>Update</button></span>}
+                    /> : element.position}</li> {showEditPosition == element.key  && <span><button className="update-button edit" onClick={updatePositionEdit} value={element.key}>Update</button></span>}
 
 
                     <li onClick={clickDescriptionHandler}  value={element.key}>{showEditDescription == element.key  ? <input onChange={handleDescriptionEdit} 
                     name="description"
                     value={editDescription} 
                     placeholder="Description" 
-                    /> : element.description}</li> {showEditDescription == element.key  && <span><button onClick={updateDescriptionEdit} value={element.key}>Update</button></span>}
+                    /> : element.description}</li> {showEditDescription == element.key  && <span><button className="update-button edit" onClick={updateDescriptionEdit} value={element.key}>Update</button></span>}
 
 
                     <button className="remove-button" onClick={() => {

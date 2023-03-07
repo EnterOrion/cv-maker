@@ -81,7 +81,7 @@ const EducationForm = () => {
                 name="degree"
                 value={formData.degree}
             />
-            <button>Add</button>
+            <button className="update-button">Add</button>
         </form>
         </div>
 

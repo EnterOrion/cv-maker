@@ -113,21 +113,21 @@ const EducationDisplay = () => {
                         value={editSchool} 
                         placeholder="Name of School"/>:
                         element.school}
-                    </li> {showEditSchool == element.key  && <span><button onClick={updateSchoolEdit} value={element.key}>Update</button></span>}
+                    </li> {showEditSchool == element.key  && <span><button className="update-button edit" onClick={updateSchoolEdit} value={element.key}>Update</button></span>}
                     
                     
                     <li className="italic" onClick={clickYearHandler}  value={element.key}>{showEditYears == element.key  ? <input onChange={handleYearEdit} 
                     name="years"
                     value={editYear} 
                     placeholder="Years (from - to)" 
-                    /> : element.years}</li> {showEditYears == element.key  && <span><button onClick={updateYearEdit} value={element.key}>Update</button></span>}
+                    /> : element.years}</li> {showEditYears == element.key  && <span><button className="update-button edit" onClick={updateYearEdit} value={element.key}>Update</button></span>}
 
 
                     <li onClick={clickDegreeHandler}  value={element.key}>{showEditDegree == element.key  ? <input onChange={handleDegreeEdit} 
                         name="degree"
                         value={editDegree} 
                         placeholder="Degree"/>:
-                        element.degree}</li> {showEditDegree == element.key  && <span><button onClick={updateDegreeEdit} value={element.key}>Update</button></span>}
+                        element.degree}</li> {showEditDegree == element.key  && <span><button className="update-button edit" onClick={updateDegreeEdit} value={element.key}>Update</button></span>}
                     
                     <button className="remove-button" onClick={() => {
                     setAddData(

@@ -88,7 +88,7 @@ const PersonalDetailsForm = () => {
                 name="address"
                 value={formData.address}
             />
-            <button>Update</button>
+            <button className="update-button">Update</button>
         </form>
     
     

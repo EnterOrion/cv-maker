@@ -51,7 +51,7 @@ const SkillsDisplay = () => {
                         value={editSkills} 
                         placeholder="Skill"/>:
                         element.skill}
-                </li> {showEditSkills == element.key  && <span><button onClick={updateSkillsEdit} value={element.key}>Update</button></span>}
+                </li> {showEditSkills == element.key  && <span><button className="update-button edit" onClick={updateSkillsEdit} value={element.key}>Update</button></span>}
                 <button className="remove-button" onClick={() => {
                     setAddData(
                         addData.filter(a =>

@@ -92,7 +92,7 @@ const ExperienceForm = () =>
                 name="description"
                 value={formData.description}
             />
-            <button>Add</button>
+            <button className="update-button">Add</button>
         </form>
         </div>
     )

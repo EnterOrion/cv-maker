@@ -57,7 +57,7 @@ const SkillsForm = () => {
                 name="skill"
                 value={formData.skill}
             />
-                <button>Add</button>
+                <button className="update-button">Add</button>
         </form>
         </div>
             )
